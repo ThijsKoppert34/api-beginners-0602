@@ -4,7 +4,28 @@
 // iedereen: https://fdnd.directus.app/items/person/?fields=id,name,github_handle,avatar&filter={%22squads%22:{%22squad_id%22:{%22name%22:%22Minor%20Web%20Dev%22}}}&sort=name
 
 const baseURL = 'https://fdnd.directus.app/';
-const endpointMe = 'items/person/67';
+const endpointMe = 'items/person/223';
+
+const myURL = baseURL + endpointMe;
+// Dit zorgt ervoor dat het pad gekoppeld word. baseURL = waar komt de info vandaan, endpointMe = welke data wil je hebben
+
+console.log(myURL);
+
+getData(myURL).then( data223 => {
+// Dit is het aanroepen van de data, en 'then' is wat je ermee doet
+
+let deH1 = document.querySelector("h1"); 
+// Je spreekt de h1 aan in je tekst en die geef je een 'let' 
+
+let myName = data223.data.name;
+// Dit is het aanmaken van een let die je naam oproept
+
+deH1.textContent = myName;
+// Hier zeg je plaats in de h1 de tekst van de let myName
+
+	console.log(myName);
+});
+
 
 
 

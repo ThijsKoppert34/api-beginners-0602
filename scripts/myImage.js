@@ -1,4 +1,22 @@
+getData(myURL).then(data223 => {
+    let myAvatar = data223.data.avatar;
+    let myName = data223.data.name;
 
+    let myImg = document.createElement("img");
+    
+
+    myImg.src = myAvatar;
+    myImg.alt = myName;
+
+    console.log(myImg);
+
+    let mySection = document.querySelector("section:nth-of-type(1)");
+
+    mySection.append(myImg);
+
+
+}
+)
 
 
 
